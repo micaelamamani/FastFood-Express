@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Mostrar clientes</title>
+</head>
+<body>
+    <h1>mostrar todo</h1>
+    <table>
+        <thead>
+            <th>idCliente</th>
+            <th>nombre</th>
+            <th>direccion</th>
+            <th>telefono</th>
+        </thead>
+         <tbody>
+
+               <% if (registros.length > 0) {
+                    registros.forEach(cli => { %>
+                        <tr>
+                            <td><%= cli.idCliente %></td>
+                            <td><%= cli.nombre %></td>
+                            <td><%= cli.direccion %></td>
+                            <td><%= cli.telefono %></td>
+                        </tr>                        
+                 <%   });
+                } else { %>
+                    <p>No hay clientes cargados.</p>                    
+                <% } %>
+        </tbody>
+     </table>
+
+</body>
+</html>

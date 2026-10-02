@@ -29,10 +29,9 @@ export const nuevo = async (pet, resp) => {
     id= pet.body.idhtml;
     nom = pet.body.nomhtml;
     direc = pet.body.dirhtml;
-    ciu = pet.body.ciuhtml;
     tel = pet.body.telhtml;
     try{
-        let altasql= "INSERT INTO tienda.cliente (idCliente, nombre, direccion, ciudad, telefono) VALUES ('"+id+"','"+nom+"', '"+direc+"', '"+ciu+"', '"+tel+"')";
+        let altasql= "INSERT INTO tienda.cliente (idCliente, nombre, direccion, telefono) VALUES ('"+id+"','"+nom+"', '"+direc+"', '"+tel+"')";
         const [registro]= await bdd.query(altasql)
         console.log(registro);
         resp.render('index');
