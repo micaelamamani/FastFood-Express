@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Rapida</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+     <h1>Formulario de Cliente</h1>
+    <form id="formu" action="/cliente/cliNuevo" method="post">
+        <div id="estiloForm">
+            <label for="id">ID:</label>
+            <input type="text" id="idcliente" name="idhtml" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombreCliente" name="nomhtml" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="dirhtml" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telhtml">
+        </div>
+         <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
