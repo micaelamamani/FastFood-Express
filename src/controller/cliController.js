@@ -1,6 +1,8 @@
 import { get } from "http";
 import { conectar } from "../database/conexion.js"
 
+const bdd= await conectar();
+
 export const cAlta = (pet, resp) => {
     resp.render('cliAlta');
 }
