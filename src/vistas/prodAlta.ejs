@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Rapida</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+     <h1>Formulario de Producto</h1>
+    <form id="formu" action="/producto/prodNuevo" method="post">
+        <div id="estiloForm">
+            <label for="id">ID:</label>
+            <input type="text" id="idproducto" name="idhtml" required>
+
+            <label for="nombre">Nombre del articulo:</label>
+            <input type="text" id="nombre_articulo" name="nomhtml" required>
+
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" name="cathtml" required>
+
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" name="prechtml">
+        </div>
+         <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
