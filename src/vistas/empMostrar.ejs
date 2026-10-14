@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Mostrar empleados</title>
+</head>
+<body>
+    <h1>mostrar todo</h1>
+    <table>
+        <thead>
+            <th>idEmpleado</th>
+            <th>nombre</th>
+            <th>cargo</th>
+            <th>turno</th>
+        </thead>
+         <tbody>
+
+               <% if (registros.length > 0) {
+                    registros.forEach(emp => { %>
+                        <tr>
+                            <td><%= emp.idempleados %></td>
+                            <td><%= emp.nombre_completo %></td>
+                            <td><%= emp.cargo %></td>
+                            <td><%= emp.turno %></td>
+                        </tr>                        
+                 <%   });
+                } else { %>
+                    <p>No hay clientes cargados.</p>                    
+                <% } %>
+        </tbody>
+     </table>
+
+</body>
+</html>
