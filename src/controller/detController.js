@@ -40,17 +40,8 @@ export const dnuevo = async (pet, resp) => {
         let altasql= "INSERT INTO comidarapida.detalle_pedido(iddetalle_pedido,cantidad,precio_total,pedidos_idpedido,productos_idproductos) VALUES ('"+id+"','"+cantidad+"', '"+precio+"', '"+idpedido+"','"+idproducto+"')";
         const [registro]= await bdd.query(altasql)
         console.log(registro);
-        resp.render('index');
+        resp.render('detAlta');
     } catch(error){
-        console.log(`Error al crear la sentencia insert ${error}`);
+         resp.send(`<script>alert("Error: ${error.message}"); history.back();</script>`);
     }
 }
-
-//al dar nuevo cliente vuelve al formulario
-//hacer alert con diseño de pagina programa que mando fabio
-//entregar 27 de octubre. porque el 30 es la feria
-//todos hasta pedidos tienen que dar de alta, mostrar todos y consultar por id: 
-//clientes, empleados, productos, pedidos
-//validacion funcionar
-//estadisticas para despues 
-//todo para el viernes

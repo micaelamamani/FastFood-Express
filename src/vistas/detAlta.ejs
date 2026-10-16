@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comida Rapida</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="/estilo/estilo.css">
 </head>
 <body>
      <h1>Formulario de Detalles del Pedido</h1>
-    <form id="formu" action="/detalle/detNuevo" method="post">
+    <form id="formu" action="/detalle/detNuevo" method="post" autocomplete="off">
         <div id="estiloForm">
             <label for="id">ID:</label>
             <input type="text" id="iddetallepedido" name="idhtml" required>
@@ -31,7 +31,7 @@
             <a href="/producto/mt" class="btnVerMas" >Ver Mas</a>
 
         </div>
-         <input type="submit" value="Enviar">
+         <input class="btnEnviar" type="submit" value="Enviar">
          <a href="/" class="btnCancelar" >Cancelar</a>
     </form>
 </body>

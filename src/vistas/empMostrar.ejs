@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo/estilo.css">
+    <title>Mostrar empleados</title>
+</head>
+<body>
+    <header>
+            <section id="imagen">
+                <img src="../img/logoComidaRapida.svg" alt="logo">
+                <h2>FastFood Express</h2>
+            </section>
+            <section id="menu">
+                <nav>
+                    <ul>
+                        <li id="boton"><a href='/'>Home</a></li>
+                        <li id="boton"><a href='/cliente'>clientes</a></li>
+                        <li id="boton"  style="background-color: black"><a href="/empleado">empleados</a></li>
+                        <li id="boton"><a href="/producto">productos</a></li>
+                        <li id="boton"><a href="/pedido">pedidos</a></li>
+                        <li id="boton"><a href="/detalle">detalles de pedidos</a></li>
+                        <li id="boton"><a href="estadistica.ejs">estadistica</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+    <h1>Mostrar empleados</h1>
+    <table>
+        <thead>
+            <th>idEmpleado</th>
+            <th>nombre</th>
+            <th>cargo</th>
+            <th>turno</th>
+        </thead>
+         <tbody>
+
+               <% if (registros.length > 0) {
+                    registros.forEach(emp => { %>
+                        <tr>
+                            <td><%= emp.idempleados %></td>
+                            <td><%= emp.nombre_completo %></td>
+                            <td><%= emp.cargo %></td>
+                            <td><%= emp.turno %></td>
+                        </tr>                        
+                 <%   });
+                } else { %>
+                    <p>No hay empleados cargados.</p>                    
+                <% } %>
+        </tbody>
+     </table>
+
+</body>
+</html>

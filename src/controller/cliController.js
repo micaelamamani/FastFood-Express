@@ -41,6 +41,6 @@ export const nuevo = async (pet, resp) => {
         console.log(registro);
         resp.render('index');
     } catch(error){
-        console.log(`Error al crear la sentencia insert ${error}`);
+        resp.send(`<script>alert("Error: ${error.message}"); history.back();</script>`);
     }
 }

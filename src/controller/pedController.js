@@ -44,21 +44,6 @@ export const pedNuevo = async (pet, resp) => {
         console.log(registro);
         resp.render('detAlta');
     } catch(error){
-        
-            Swal.fire({
-                title: "Error al crear el pedido",
-                text: "<%= error %>",
-                width: 600,
-                padding: "3em",
-                color: "#716add",
-                background: "#fff url(https://github.io)",
-                backdrop: `
-                    rgba(0,0,123,0.4)
-                    url("https://github.io")
-                    left top
-                    no-repeat
-                `
-            });
-        
+       resp.send(`<script>alert("Error: ${error.message}"); history.back();</script>`);
     }
 }

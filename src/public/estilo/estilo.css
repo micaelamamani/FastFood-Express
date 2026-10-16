@@ -12,10 +12,11 @@ header{
     justify-content: space-around;
 }
 #boton{
-    padding: 1%;
+    padding: 1% 15px;
     background-color: #000000CC;
     text-align: center;
     border-radius: 13px;
+    width: auto;
 }
 #imagen{
     display: flex;
@@ -152,31 +153,40 @@ input{
     border-radius: 5px;
     font-weight: bold;
 }
-/* ==========================================================================
-   DISEÑO SIMPLE PARA TODAS LAS TABLAS
-   ========================================================================== */
-
-/* Centra la tabla en la página y le da el fondo negro */
 table {
     width: 85%;
     margin: 30px auto;
-    background-color: #000000CC; /* El mismo fondo negro de tus menús */
-    border-collapse: collapse;  /* Une las líneas para que no se vea doble borde */
+    background-color: #000000CC; 
+    border-collapse: collapse;  
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     color: white;
 }
-
-/* Estilo para los títulos de arriba (idCliente, nombre, etc.) */
 th {
-    background-color: #be8a1a;  /* Tu color dorado */
+    background-color: #be8a1a;
     color: white;
     padding: 10px;
     text-align: center;
 }
-
-/* Estilo para los datos de la base de datos */
 td {
     padding: 10px;
-    border: 1px solid #be8a1a; /* Cuadrícula con líneas finitas doradas */
+    border: 1px solid #be8a1a; 
     text-align: center;
+}
+.btnVerMas {
+    padding: 1%;
+    background-color: #be8a1a; 
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 25%; 
+    display: inline-block;
+}
+.btnCancelar {
+    padding: 12px;
+    background-color: #000000; 
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+    box-sizing: border-box;
 }

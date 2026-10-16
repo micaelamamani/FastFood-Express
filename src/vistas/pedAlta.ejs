@@ -21,13 +21,14 @@
                         <li id="boton"><a href="/empleado">empleados</a></li>
                         <li id="boton"><a href="/producto">productos</a></li>
                         <li id="boton" style="background-color: black"><a href="/pedido">pedidos</a></li>
+                        <li id="boton"><a href="/detalle">detalles de pedidos</a></li>
                         <li id="boton"><a href="/estadistica">estadistica</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
      <h1>Formulario de Pedido</h1>
-    <form id="formu" action="/pedido/pedNuevo" method="post">
+    <form id="formu" action="/pedido/pedNuevo" method="post" autocomplete="off">
         <div id="estiloForm">
             <label for="id">ID:</label>
             <input type="text" id="idpedido" name="idhtml" required>
@@ -46,11 +47,14 @@
 
             <label for="clientes_idclientes">Id del cliente:</label>
             <input type="text" id="clientes_idclientes" name="clihtml">
+            <a href="/cliente/mt" class="btnVerMas" >Ver Más</a>
 
             <label for="empleados_idempleados">Id del empleado:</label>
             <input type="text" id="empleados_idempleados" name="emphtml">
+             <a href="/empleado/mt" class="btnVerMas" >Ver Más</a>
         </div>
          <input class="btnEnviar" type="submit" value="Enviar">
+         <a href="/" class="btnCancelar" >Cancelar</a>
     </form>
 </body>
 </html>
