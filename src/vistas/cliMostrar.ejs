@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="/estilo/estilo.css">
     <title>Mostrar clientes</title>
 </head>
+
 <body>
+            <header>
+            <section id="imagen">
+                <img src="../img/logoComidaRapida.svg" alt="logo">
+                <h2>FastFood Express</h2>
+            </section>
+            <section id="menu">
+                <nav>
+                    <ul>
+                        <li id="boton"><a href='/'>Home</a></li>
+                        <li id="boton" style="background-color: black"><a href='/cliente'>clientes</a></li>
+                        <li id="boton"><a href="/empleado">empleados</a></li>
+                        <li id="boton"><a href="/producto">productos</a></li>
+                        <li id="boton"><a href="/pedido">pedidos</a></li>
+                        <li id="boton"><a href="/estadistica">estadistica</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
     <h1>mostrar todo</h1>
-    <table>
-        <thead>
-            <th>idCliente</th>
-            <th>nombre</th>
-            <th>direccion</th>
-            <th>telefono</th>
-        </thead>
-         <tbody>
+    <div div="contenedor-tabla">
+        <table>
+            <thead>
+                <th>idCliente</th>
+                <th>nombre</th>
+                <th>direccion</th>
+                <th>telefono</th>
+            </thead>
+            <tbody>
 
-               <% if (registros.length > 0) {
+                <% if (registros.length> 0) {
                     registros.forEach(cli => { %>
-                        <tr>
-                            <td><%= cli.idclientes %></td>
-                            <td><%= cli.nombre_completo %></td>
-                            <td><%= cli.direccion %></td>
-                            <td><%= cli.telefono %></td>
-                        </tr>                        
-                 <%   });
-                } else { %>
-                    <p>No hay clientes cargados.</p>                    
-                <% } %>
-        </tbody>
-     </table>
+                    <tr>
+                        <td>
+                            <%= cli.idclientes %>
+                        </td>
+                        <td>
+                            <%= cli.nombre_completo %>
+                        </td>
+                        <td>
+                            <%= cli.direccion %>
+                        </td>
+                        <td>
+                            <%= cli.telefono %>
+                        </td>
+                    </tr>
+                    <% }); } else { %>
+                        <p>No hay clientes cargados.</p>
+                        <% } %>
+            </tbody>
+        </table>
 
+    </div>
 </body>
+
 </html>

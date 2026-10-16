@@ -44,4 +44,3 @@ export const nuevo = async (pet, resp) => {
         console.log(`Error al crear la sentencia insert ${error}`);
     }
 }
-

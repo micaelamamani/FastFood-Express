@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilo/estilo.css">
+    <title>Mostrar pedidos</title>
+</head>
+<body>
+    <header>
+            <section id="imagen">
+                <img src="../img/logoComidaRapida.svg" alt="logo">
+                <h2>FastFood Express</h2>
+            </section>
+            <section id="menu">
+                <nav>
+                    <ul>
+                        <li id="boton"><a href='/'>Home</a></li>
+                        <li id="boton"><a href='/cliente'>clientes</a></li>
+                        <li id="boton"><a href="/empleado">empleados</a></li>
+                        <li id="boton"><a href="/producto">productos</a></li>
+                        <li id="boton" style="background-color: black"><a href="/pedido">pedidos</a></li>
+                        <li id="boton"><a href="/estadistica">estadistica</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+    <h1>Pedidos</h1>
+    <table>
+        <thead>
+            <th>idPedido</th>
+            <th>fecha</th>
+            <th>hora</th>   
+            <th>servicio</th>
+            <th>estado</th>
+            <th>idCliente</th>
+            <th>idEmpleado</th>
+        </thead>
+         <tbody>
+
+               <% if (registros.length > 0) {
+                    registros.forEach(ped => { %>
+                        <tr>
+                            <td><%= ped.idpedido %></td>
+                            <td><%= ped.fecha %></td>
+                            <td><%= ped.hora %></td>
+                            <td><%= ped.tipo_servicio %></td>
+                            <td><%= ped.estado %></td>
+                            <td><%= ped.clientes_idclientes %></td>
+                            <td><%= ped.empleados_idempleados %></td>
+                        </tr>                        
+                 <%   });
+                } else { %>
+                    <p>No hay pedidos cargados.</p>                    
+                <% } %>
+        </tbody>
+     </table>
+
+</body>
+</html>
